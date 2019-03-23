@@ -9,7 +9,9 @@ app.use(bodyParser.urlencoded({ extended: true}))
 
 app.get('/', (req, res) => res.send('Hello World!'))
 
-app.get('/anotherone', (req, res) => res.send('Another One'))
+app.get('/anotherone', (req, res) => {
+    res.send('Another One')
+})
 
 app.get('/users', (req, res) => res.send(Object.values(users)))
 
